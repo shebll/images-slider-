@@ -1,5 +1,5 @@
 let imgs = Array.from(document.querySelectorAll(".slider-container img"));
-let slideNumber = document.querySelector(".slider-container .slider-number ");
+let slideNumber = document.querySelector(".slider-container .slider-number");
 let next = document.querySelector(".next ");
 let previous = document.querySelector(".prev ");
 let imgsCount = imgs.length;
@@ -19,10 +19,18 @@ for (let i = 1; i <= imgsCount; i++) {
 }
 document.querySelector(".indicators").appendChild(bullets);
 ////////////////////////////////////////////////////////////////////////
-function nextSlide() {
-  console.log("next");
-}
+let bullet = document.querySelector("#bullets-ul");
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+function nextSlide() {}
 function prevSlide() {
   console.log("prev");
 }
+function checker() {
+  slideNumber.innerHTML = `slide #${firstImg} of ${imgsCount}`;
+  imgs[firstImg - 1].classList.add("active");
+  bullet.children[firstImg - 1].classList.add("active");
+}
 ////////////////////////////////////////////////////////////////////////
+checker();
