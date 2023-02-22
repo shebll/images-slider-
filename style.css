@@ -73,6 +73,7 @@ max-width: 100%;
 .slider-controls .next.disable,
 .slider-controls .prev.disable{
   cursor: no-drop;
+  background-color: #525252;
 
 }
 .indicators ul {
